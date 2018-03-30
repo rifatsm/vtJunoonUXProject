@@ -25,3 +25,10 @@ def signup(request):
 def login(request):
     return render(request, "login.html")
 
+def in_land(request):
+    return render(request, "in_landing.html")
+
+
+def prac(request):
+    return render(request, "practicevideos.html")
+

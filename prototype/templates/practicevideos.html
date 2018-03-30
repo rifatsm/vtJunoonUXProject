@@ -1,0 +1,149 @@
+<{% include "header.html" %}
+{% load static %}
+
+    <div class="" id="navigationBar">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header" style="margin-left: 10px;margin-right: 10px"> <a class="navbar-brand" href="#">VT Junoon</a> </div>
+                <ul class="nav navbar-nav">
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../about/">About Us</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../people/">People</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../gallery/">Gallery</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../fund/">Fund Us</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../contact/">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../about/"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="" id="practicevideos">
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Practice Videos</div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="postButton"><a href="#">Post</a></li>
+                        <li class="disabled"><a href="#">Delete</a></li>
+                        <li class="" id="reviewButton"><a href="#">Review and Discuss  <span class="badge badge-light"> 17</span></a></li>
+                    </ul>
+                    <div id="postArea">
+                        <br>Upload :
+                        <label class="btn btn-default" style="margin-left: 5px;">
+                            <input type="file" hidden> </label>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-2"> Practice Date :</div>
+                            <div class="col-md-3">
+                                <div>
+                                    <input placeholder="Today" style="margin-left: 5px;margin-right: 5px;"><span class="glyphicon glyphicon-calendar" id="calendarpopup"></span>
+                                    <br><img src="{% static 'img/calendar.png' %}" id="calendarworks" style="width: 160;height: 240;margin-top: 10px;margin-bottom: 10px;display: none;"> </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <br>
+                                <p>Note : </p>
+                                <textarea rows="3" cols="40"></textarea>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button class="btn btn-default btn-block"><a href="../in/">Cancel</a></button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-warning btn-block">Save as Draft</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-primary btn-block">Share with Dancers Only</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-success btn-block">Share with All</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reviewArea" style="display: none;">
+                        <br>
+                        <div class="col-md-4 text-center" style="border: 1px solid;padding: 5px;" href="#"> <a href="#"><img src="{% static 'img/movies.png' %}" style="width: 120;height: 120;"></a>
+                            <br>
+                            <br>
+                            <p>Date</p>
+                            <p>Dance</p>
+                            <p>Notes</p>
+                        </div>
+                        <div class="col-md-4 text-center" style="border: 1px solid;padding: 5px;" href="#"> <a href="#"><img src="{% static 'img/movies.png' %}" style="width: 120;height: 120;"></a>
+                            <br>
+                            <br>
+                            <p>Date</p>
+                            <p>Dance</p>
+                            <p>Notes</p>
+                        </div>
+                        <div class="col-md-4 text-center" style="border: 1px solid;padding: 5px;" href="#"> <a href="#"><img src="{% static 'img/movies.png' %}" style="width: 120;height: 120;"></a>
+                            <br>
+                            <br>
+                            <p>Date</p>
+                            <p>Dance</p>
+                            <p>Notes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="col-md-4">
+            <div class="row text-center">
+                <p>
+                    <input placeholder="Search events and content" style="width:200px;margin-right: 10px;"><span class="glyphicon glyphicon-search"></span></p>
+            </div>
+            <div class="row text-center"> <img src="{% static 'img/calendar.png' %}" style="height: 240;width: 180;">
+                <br> </div>
+            <div class="text-center" style="margin-left: 50px;margin-right: 50px;">
+                <br>
+                <table class="table" style="border: 1px solid">
+                    <thead>
+                        <th class="text-center">Announcements and Recent Posts</th>
+                    </thead>
+                    <tbody>
+                       <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Dance Practice in Squires on 19th at 7:30pm</td>
+                        </tr>    
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-calendar"> </span> Performing at Squires on 20th </td>
+                        </tr>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Dance Practice in Squires on 21st at 7:00pm</td>
+                        </tr>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Volunteer for Bake Sale: 1/22 from from 1-2pm<span class="glyphicon glyphicon-grain"></span> </td>
+                        </tr>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Volunteer for Bake Sale: 1/22 from 2-3pm<span class="glyphicon glyphicon-grain"></span> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#calendarpopup').on('click', function () {
+                $('#calendarworks').toggle();
+            });
+            $('#reviewButton').on('click', function () {
+                $('#postArea').css('display', 'none');
+                $('#reviewArea').css('display', '');
+                $('#postButton').removeClass('active');
+                $('#reviewButton').addClass('active');
+            })
+            $('#postButton').on('click', function () {
+                $('#postArea').css('display', '');
+                $('#reviewArea').css('display', 'none');
+                $('#postButton').addClass('active');
+                $('#reviewButton').removeClass('active');
+            })
+        });
+    </script>
+{% include "footer.html" %}

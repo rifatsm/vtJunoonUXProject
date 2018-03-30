@@ -1,0 +1,251 @@
+{% include "header.html" %}
+{% load static %}
+    
+    <div class="" id="navigationBar">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header" style="margin-left: 10px;margin-right: 10px"> <a class="navbar-brand" href="#">VT Junoon</a> </div>
+                <ul class="nav navbar-nav">
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../about/">About Us</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../people/">People</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../gallery/">Gallery</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../fund/">Fund Us</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../contact/">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../about/"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="" id="aboutpage">
+        <div class="col-md-8">
+            <div id="example1" class="text-justify">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Public Actions</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4"> 
+                                <button data-toggle="modal" data-target="#createPost"><img src="{% static 'img/createPosts.png' %}" style="height: 180;width: 120;"> </br> Create New Posts</button>
+
+                                <div class="modal fade" id="createPost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabel">Create New Post</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Title: <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+                                            Content: <textarea class="form-control" id="demo-editor-bootstrap" rows="10"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save Draft</button>
+                                                <button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#postSuccess">Post Online</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="postSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-header-success" style="background: #3BDA64;">
+                                                <h3 class="modal-title" id="exampleModalLabel"><i class="glyphicon glyphicon-thumbs-up"></i>  Congratulations!</h3>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Congratulations! Your post has been posted online!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4"> 
+                                <button data-toggle="modal" data-target="#createEvent"><img src="{% static 'img/postEvents.png' %}" style="height: 180;width: 120;"> </br> Post New Events</button>
+
+                                <div class="modal fade" id="createEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabel"> Create Event </h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Date: 
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class='col-sm-6'>
+                                                        <div class="form-group">
+                                                            <div class='input-group date' id='datetimepicker1'>
+                                                                <input type='text' class="form-control" placeholder="MM/DD/YYYY" name="date", id="date"/>
+                                                                <span class="input-group-addon">
+                                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        $(function () {
+                                                            $('#datetimepicker1').datetimepicker();
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            Brief Description: <textarea class="form-control" id="demo-editor-bootstrap" rows="3"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save Draft</button>
+                                                <button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#postSuccess">Post Event</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4"> 
+                                <button data-toggle="modal" data-target="#fundraiser"><img src="{% static 'img/fundraiser.png' %}" style="height: 180;width: 120;"> </br> Start a Fundraiser Campaign </button>
+
+                                <div class="modal fade" id="fundraiser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabel">Create a New Fundraiser</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Enter your goal Amount (USD): <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter amount">
+                                            Campaign Title: <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title"> </br>
+                                            Campaign Images: <button class="btn btn-primary">Upload Images</button></br>
+                                            Campaign Description:<textarea class="form-control" id="demo-editor-bootstrap" rows="10"></textarea> </br>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save Draft</button>
+                                                <button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#postFundSuccess">Post Event</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="postFundSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header modal-header-success" style="background: #3BDA64;">
+                                                <h3 class="modal-title" id="exampleModalLabel"><i class="glyphicon glyphicon-thumbs-up"></i>  Congratulations!</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            Your campaign has been successfully created! </br>
+
+                                            <br> Campaign link: <input type="text" class="form-control" name="link" value="http://junoon.vt.edu/campaign/UCISDanceComp" readonly><br>
+
+                                            Share on Social Network: <a class="btn btn-large btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a><a class="btn btn-large btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a><a class="btn btn-large btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="row text-center">
+                <p>
+                    <input placeholder="Search events and content" style="width:200px;margin-right: 10px;"><span class="glyphicon glyphicon-search"></span></p>
+            </div>
+            <div class="row text-center"> <img src="{% static 'img/calendar.png' %}" style="height: 240;width: 180;">
+                <br>
+            </div>
+        </div>
+
+
+        <div class="col-md-8">
+            <div id="example1" class="text-justify">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Dance Team Only</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-2"> 
+                                <img src="{% static 'img/discussion.png' %}" style="height: 180;width: 120;"> </br> Discussion Forum
+                            </div>
+                            <div class="col-md-2"> 
+                                <a href="../practicevideos/"><img src="{% static 'img/dancePractice.png' %}" style="height: 180;width: 120;"> </br> Post Practice Video</a>
+                            </div>
+                            <div class="col-md-2"> 
+                                <img src="{% static 'img/schedule.png' %}" style="height: 180;width: 120;"> </br> Schedule Practice
+                            </div>
+                            <div class="col-md-2"> 
+                                <img src="{% static 'img/danceFormation.png' %}" style="height: 180;width: 120;"> </br> Setup Formation
+                            </div>
+                            <div class="col-md-2"> 
+                                <img src="{% static 'img/poll.png' %}" style="height: 180;width: 120;"> </br> Create Poll
+                            </div>
+                           <div class="col-md-2"> 
+                                <img src="{% static 'img/contactExecutive.png' %}" style="height: 180;width: 120;"> </br> Contact Executive Board
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"> 
+            <div class="text-center" style="margin-left: 50px;margin-right: 50px;">
+                <br>
+                <table class="table" style="border: 1px solid">
+                    <thead>
+                        <th class="text-center">Announcements and Recent Posts</th>
+                    </thead>
+                    <tbody>
+                       <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Dance Practice in Squires on 19th at 7:30pm</td>
+                        </tr>    
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-calendar"> </span> Performing at Squires on 20th </td>
+                        </tr>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Dance Practice in Squires on 21st at 7:00pm</td>
+                        </tr>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Volunteer for Bake Sale: 1/22 from from 1-2pm<span class="glyphicon glyphicon-grain"></span> </td>
+                        </tr>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td><span class="glyphicon glyphicon-time"> </span> Volunteer for Bake Sale: 1/22 from 2-3pm<span class="glyphicon glyphicon-grain"></span> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div id="example1" class="text-justify">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">For Web Admins Only</div>
+                </div>  
+            </div>          
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+{% include "footer.html" %}
