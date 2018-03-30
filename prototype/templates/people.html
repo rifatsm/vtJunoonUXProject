@@ -1,0 +1,98 @@
+{% include "header.html" %}
+{% load static %}
+
+    <div class="" id="navigationBar">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header" style="margin-left: 10px;margin-right: 10px"> <a class="navbar-brand" href="#">VT Junoon</a> </div>
+                <ul class="nav navbar-nav">
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../about/">About Us</a></li>
+                    <li class="active" style="margin-left: 20px;margin-right: 20px"><a href="#">People</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../gallery/">Gallery</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../fund/">Fund Us</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="../contact/">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="margin-left: 20px;"><a href="../signup/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li style="margin-left: 20px;margin-right: 20px"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="" id="people">
+        <div class="col-md-8">
+            <div class="">
+                <div class="col-md-3 text-center" style="border: 1px solid;padding: 5px;margin: 5px;"> <img src="{% static 'img/person.png' %}" style="width: 120;height: 120;">
+                    <br>
+                    <br>
+                    <p>Name</p>
+                    <p>Position</p>
+                    <p>Major</p>
+                </div>
+                <div class="col-md-3 text-center" style="border: 1px solid;padding: 5px;margin: 5px;"> <img src="{% static 'img/person.png' %}" style="width: 120;height: 120;">
+                    <br>
+                    <br>
+                    <p>Name</p>
+                    <p>Position</p>
+                    <p>Major</p>
+                </div>
+                <div class="col-md-3 text-center" style="border: 1px solid;padding: 5px;margin: 5px;"> <img src="{% static 'img/person.png' %}" style="width: 120;height: 120;">
+                    <br>
+                    <br>
+                    <p>Name</p>
+                    <p>Position</p>
+                    <p>Major</p>
+                </div>
+            </div>
+            <div class="">
+                <div class="col-md-3 text-center" style="border: 1px solid;padding: 5px;margin: 5px;"> <img src="{% static 'img/person.png' %}" style="width: 120;height: 120;">
+                    <br>
+                    <br>
+                    <p>Name</p>
+                    <p>Position</p>
+                    <p>Major</p>
+                </div>
+                <div class="col-md-3 text-center" style="border: 1px solid;padding: 5px;margin: 5px;"> <img src="{% static 'img/person.png' %}" style="width: 120;height: 120;">
+                    <br>
+                    <br>
+                    <p>Name</p>
+                    <p>Position</p>
+                    <p>Major</p>
+                </div>
+                <div class="col-md-3 text-center" style="border: 1px solid;padding: 5px;margin: 5px;"> <img src="{% static 'img/person.png' %}" style="width: 120;height: 120;">
+                    <br>
+                    <br>
+                    <p>Name</p>
+                    <p>Position</p>
+                    <p>Major</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row text-center">
+                <p>
+                    <input placeholder="Search events and content" style="width:200px;margin-right: 10px;"><span class="glyphicon glyphicon-search"></span></p>
+            </div>
+            <div class="row text-center"> <img src="{% static 'img/calendar.png' %}" style="height: 240;width: 180;">
+                <br> </div>
+            <div class="text-center" style="margin-left: 50px;margin-right: 50px;">
+                <br>
+                <table class="table" style="border: 1px solid">
+                    <thead>
+                        <th class="text-center">Announcements and Recent Posts</th>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td>Performing at Squires on 20th !!! </td>
+                        </tr>
+                        <tr class="text-center" style="color: darkslategray">
+                            <td>New members join team !! Welcome !! </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% include "footer.html" %}
