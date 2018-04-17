@@ -23,50 +23,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Practice Videos</div>
                 <div class="panel-body">
-                    <ul class="nav nav-tabs">
-                        <li class="active" id="postButton"><a href="#">Post</a></li>
-                        <li class="disabled"><a href="#">Delete</a></li>
-                        <li class="" id="reviewButton"><a href="#">Review and Discuss  <span class="badge badge-light"> 17</span></a></li>
-                    </ul>
-                    <div id="postArea">
-                        <br>Upload :
-                        <label class="btn btn-default" style="margin-left: 5px;">
-                            <input type="file" hidden> </label>
-                        <br>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-2"> Practice Date :</div>
-                            <div class="col-md-3">
-                                <div>
-                                    <input placeholder="Today" style="margin-left: 5px;margin-right: 5px;"><span class="glyphicon glyphicon-calendar" id="calendarpopup"></span>
-                                    <br><img src="{% static 'img/calendar.png' %}" id="calendarworks" style="width: 160;height: 240;margin-top: 10px;margin-bottom: 10px;display: none;"> </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <br>
-                                <p>Note : </p>
-                                <textarea rows="3" cols="40"></textarea>
-                            </div>
-                            <div class="col-md-6"></div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <button class="btn btn-default btn-block"><a href="../in/">Cancel</a></button>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-warning btn-block">Save as Draft</button>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-primary btn-block">Share with Dancers Only</button>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-success btn-block">Share with All</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="reviewArea" style="display: none;">
+                    <div id="reviewArea">
                         <br>
                         <div class="col-md-4 text-center" style="border: 1px solid;padding: 5px;" href="#"> <a href="#"><img src="{% static 'img/movies.png' %}" style="width: 120;height: 120;"></a>
                             <br>
@@ -132,18 +89,6 @@
             $('#calendarpopup').on('click', function () {
                 $('#calendarworks').toggle();
             });
-            $('#reviewButton').on('click', function () {
-                $('#postArea').css('display', 'none');
-                $('#reviewArea').css('display', '');
-                $('#postButton').removeClass('active');
-                $('#reviewButton').addClass('active');
-            })
-            $('#postButton').on('click', function () {
-                $('#postArea').css('display', '');
-                $('#reviewArea').css('display', 'none');
-                $('#postButton').addClass('active');
-                $('#reviewButton').removeClass('active');
-            })
         });
     </script>
 {% include "footer.html" %}

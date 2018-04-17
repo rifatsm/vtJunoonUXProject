@@ -4,7 +4,7 @@
     <div class="" id="navigationBar">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
-                <div class="navbar-header" style="margin-left: 10px;margin-right: 10px"> <a class="navbar-brand" href="#">VT Junoon</a> </div>
+                <div class="navbar-header" style="margin-left: 10px;margin-right: 10px"> <a class="navbar-brand" href="../">VT Junoon</a> </div>
                 <ul class="nav navbar-nav">
                     <li style="margin-left: 20px;margin-right: 20px"><a href="../about/">About Us</a></li>
                     <li style="margin-left: 20px;margin-right: 20px"><a href="../people/">People</a></li>
@@ -20,11 +20,16 @@
         </nav>
     </div>
     <div class="" id="login">
-        <div class="col-md-4"></div>
+        <div class="col-md-2"></div>
         <div class="col-md-4">
-         <a href="../in/"/>   <img  src="{% static 'img/login.png' %}" style="border: 1px solid;">
+            <a href="../in/"/>   <img  src="{% static 'img/login.png' %}" style="border: 1px solid;">
+            <h4>Executive Board</h4>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+         <a href="../in_us/"/>   <img  src="{% static 'img/login.png' %}" style="border: 1px solid;">
+         <h4>Team Member</h4>
+        </div>
+        <div class="col-md-2"></div>
     
     </div>
 {% include "footer.html" %}
